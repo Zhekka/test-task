@@ -1,0 +1,37 @@
+.App {
+    display: flex;
+
+}
+
+
+.myTable {
+    border: 1px solid grey;
+    display: flex;
+}
+
+.sum {
+    border: 1px solid grey;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: greenyellow;
+}
+
+
+tr {
+    /*border: 1px solid grey;*/
+
+}
+
+td {
+    padding: 10px;
+    border: 1px solid grey;
+
+
+}
+
+/*tr:nth-last-child(1) {*/
+/*    background: red;*/
+/*}*/
+
+
