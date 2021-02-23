@@ -2,9 +2,9 @@ const PLUS_CELL = "PLUS_CELL";
 
 let initialState = {
     matrix: [
-        [1, 3, 4, 5, 2],
-        [3, 4, 5, 2, 2],
-        [9, 6, 6, 5, 4]
+        [1, 3, 4, 5],
+        [3, 4, 5, 2],
+        [7, 6, 6, 5]
     ]
 
 }

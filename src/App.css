@@ -3,9 +3,17 @@
 
 }
 
+.margin{
+    margin-right: 7px;
+}
+
+.average{
+    display: flex;
+}
+
 
 .myTable {
-    border: 1px solid grey;
+    /*border: 1px solid grey;*/
     display: flex;
 }
 
@@ -14,12 +22,13 @@
     padding: 5px;
     margin-bottom: 15px;
     text-align: center;
-    background: greenyellow;
+    background: #adff2f;
 }
 
 
 tr {
     /*border: 1px solid grey;*/
+
 
 }
 
