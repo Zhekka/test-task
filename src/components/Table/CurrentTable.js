@@ -41,31 +41,18 @@ export default function CurrentTable(props) {
         return <div key={key} className="margin-right">{item.toFixed(2)}</div>
     })
 
-// !!
-    function removeEl(array, remIdx) {
-        return array.map(function (arr) {
-            return arr.filter(function (el, idx) {
-                return idx !== remIdx
-            });
-        });
-    };
-
-    // console.log(removeEl(matrix, 0))
-// !!
-
     function showButtons() {
         let temp = []
         for (let i = 0; i < sizeC; i++) {
             temp.push(<div>
-                <button onClick={()=>{
+                <button onClick={() => {
                     props.deleteRow(i);
-                }} className="btn">delete</button>
+                }} className="btn">delete
+                </button>
             </div>)
         }
         return temp
     }
-
-    console.log('from props',matrix);
 
     return (<div className="main">
         <table className="myTable">
@@ -83,9 +70,7 @@ export default function CurrentTable(props) {
             </div>
         </table>
 
-
         <div className="average">{showAverage}</div>
-
 
     </div>)
 }
