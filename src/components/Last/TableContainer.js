@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import CurrentTable from "./CurrentTable";
-import {plusDataTableAC} from "../../redux/tableReducer";
+import {deleteRow, plusDataTableAC} from "../../redux/tableReducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -12,6 +12,9 @@ let mapDispatchToProps = (dispatch) => {
     return {
         plusDataTable: (index, subIndex)=>{
             dispatch(plusDataTableAC(index, subIndex))
+        },
+        deleteRow: (index)=>{
+            dispatch(deleteRow(index))
         }
     }
 }

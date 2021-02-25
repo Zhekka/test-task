@@ -3,44 +3,50 @@
 
 }
 
-.margin{
-    margin-right: 7px;
+.main {
+    margin: 0 auto;
 }
 
-.average{
+.btn {
+    margin-top: 15px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: red;
+    color: white;
+}
+
+.margin-bottom {
+    margin-top: 8px;
+    padding: 7px;
+}
+
+.margin-right {
+    margin-right: 3px;
+    padding: 3px;
+}
+
+.average {
     display: flex;
 }
-
 
 .myTable {
-    /*border: 1px solid grey;*/
     display: flex;
-}
-
-.sum {
-    border: 1px solid grey;
-    padding: 5px;
-    margin-bottom: 15px;
-    text-align: center;
-    background: #adff2f;
-}
-
-
-tr {
-    /*border: 1px solid grey;*/
-
-
 }
 
 td {
     padding: 10px;
     border: 1px solid grey;
-
-
 }
 
-/*tr:nth-last-child(1) {*/
-/*    background: red;*/
-/*}*/
+td:hover {
+    background: greenyellow;
+}
+
 
 
