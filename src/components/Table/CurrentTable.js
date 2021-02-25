@@ -1,4 +1,6 @@
 import React from 'react'
+import ShowTable from "./ShowTable";
+import Empty from "./Empty";
 
 export default function CurrentTable(props) {
 
@@ -35,11 +37,16 @@ export default function CurrentTable(props) {
     })
 
     // average
-    let average = matrix.map(r => r.reduce((a, b) => (a + b)) / r.length);
+    let average;
+    let showAverage;
+    try {
+        average = matrix.map(r => r.reduce((a, b) => (a + b)) / r.length);
+        showAverage = average.map((item, key) => {
+            return <div key={key} className="margin-right">{item.toFixed(2)}</div>
+        })
+    }catch (e) {
 
-    let showAverage = average.map((item, key) => {
-        return <div key={key} className="margin-right">{item.toFixed(2)}</div>
-    })
+    }
 
     function showButtons() {
         let temp = []
@@ -54,23 +61,12 @@ export default function CurrentTable(props) {
         return temp
     }
 
-    return (<div className="main">
-        <table className="myTable">
-            {showMatrix}
-            <div className="average">
-                <div>
-                    {showButtons().map((btn) => {
-                        return btn
-                    })}
-                </div>
-                <div>
-                    {showColSum}
-                </div>
+    console.log(matrix[0].length)
+    return (<div>
 
-            </div>
-        </table>
-
-        <div className="average">{showAverage}</div>
-
+        {matrix[0].length < 1 ? <Empty/> :
+            <ShowTable showMatrix={showMatrix} showButtons={showButtons} showColSum={showColSum}
+                       showAverage={showAverage}/>}
+        {/*<ShowTable showMatrix={showMatrix} showButtons={showButtons} showColSum={showColSum} showAverage={showAverage}/>*/}
     </div>)
 }

@@ -1,10 +1,11 @@
 .App {
-    display: flex;
 
 }
 
 .main {
-    margin: 0 auto;
+    margin-left: 40%
+    /*margin: 0 auto;*/
+
 }
 
 .btn {
